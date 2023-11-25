@@ -44,4 +44,21 @@ public class BaseballServiceTest {
         Assertions.assertThat(count4).isEqualTo(0);
     }
 
+    @DisplayName("볼 확인 테스트")
+    @Test
+    void countBallTest() {
+        List<Integer> userNumber1 = new LinkedList<>(List.of(1, 2, 3));
+        List<Integer> computerNumber1 = new LinkedList<>(List.of(1, 2, 3));
+        boolean[] visitNumber1 = {true, true, true};
+        int count1 = baseballService.countBall(userNumber1, computerNumber1, visitNumber1);
+        Assertions.assertThat(count1).isEqualTo(0);
+
+        List<Integer> userNumber3 = new LinkedList<>(List.of(1, 4, 2));
+        List<Integer> computerNumber3 = new LinkedList<>(List.of(1, 2, 3));
+        boolean[] visitNumber3 = {true, false, false};
+        int count3 =  baseballService.countBall(userNumber3, computerNumber3, visitNumber3);
+        Assertions.assertThat(count3).isEqualTo(1);
+
+    }
+
 }
