@@ -40,6 +40,11 @@ public class BaseballService {
         return uniqueUserNumber.size();
     }
 
-
+    public boolean checkNothing(int strikeCount, int ballCount) {
+        if (strikeCount == 0 && ballCount == 0) {
+            return true;
+        }
+        return false;
+    }
 
 }
