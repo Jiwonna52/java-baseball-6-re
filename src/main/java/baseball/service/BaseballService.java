@@ -27,6 +27,13 @@ public class BaseballService {
         return count;
     }
 
+    public boolean checkThreeStrike(int count) {
+        if (count == length) {
+            return true;
+        }
+        return false;
+    }
+
     public int countBall(List<Integer> userNumber, List<Integer> computerNumber, boolean[] visitNumber) {
         Set<Integer> uniqueUserNumber = new HashSet<>();
         Set<Integer> uniqueComputerNumber = new HashSet<>();

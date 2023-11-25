@@ -1,11 +1,9 @@
 package baseball.serviceTest;
 
 import baseball.service.BaseballService;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -82,6 +80,19 @@ public class BaseballServiceTest {
         assertThat(result1).isEqualTo(true);
         assertThat(result2).isEqualTo(false);
         assertThat(result3).isEqualTo(false);
+    }
+
+    @DisplayName("3개 스트라이크 확인 테스트")
+    @Test
+    void checkThreeStrikeTest() {
+        int count1 = 3;
+        int count2 = 1;
+
+        boolean result1 = baseballService.checkThreeStrike(count1);
+        boolean result2 = baseballService.checkThreeStrike(count2);
+
+        assertThat(result1).isEqualTo(true);
+        assertThat(result2).isEqualTo(false);
     }
 
 }
