@@ -10,5 +10,4 @@ public class InputService {
         br = new BufferedReader(new InputStreamReader(System.in));
         return br.readLine();
     }
-    
 }
