@@ -1,4 +1,4 @@
-package baseball.exceptionTest;
+package baseball.exception;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

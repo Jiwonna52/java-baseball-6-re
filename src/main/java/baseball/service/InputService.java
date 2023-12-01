@@ -1,6 +1,6 @@
 package baseball.service;
 
-import baseball.exceptionTest.InputException;
+import baseball.exception.InputException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
