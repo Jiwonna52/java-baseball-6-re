@@ -1,6 +1,5 @@
-package exception;
+package baseball.exceptionTest;
 
-import baseball.exception.InputException;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

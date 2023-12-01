@@ -1,4 +1,4 @@
-package baseball.exception;
+package baseball.exceptionTest;
 
 public class InputException {
 
