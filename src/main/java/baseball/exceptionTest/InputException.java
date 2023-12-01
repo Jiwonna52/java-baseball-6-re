@@ -13,7 +13,7 @@ public class InputException {
     }
 
     public void numLengthException(int length) {
-        if (targetLength != length) {
+        if (length != targetLength) {
             throw new IllegalArgumentException();
         }
     }
@@ -24,5 +24,9 @@ public class InputException {
         }
     }
 
-
+    public void numUniqueLengthException(int uniqueLength) {
+        if (uniqueLength != targetLength) {
+            throw new IllegalArgumentException();
+        }
+    }
 }

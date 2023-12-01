@@ -43,4 +43,16 @@ public class InputExceptionTest {
         Assertions.assertThatThrownBy(() -> inputException.notNumException(notNum2))
                 .isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    @DisplayName("중복된 숫자가 있으면 예외")
+    void numUniqueLengthExceptionTest() {
+        int wrongUniqueLength1 = 2;
+        int wrongUniqueLength2 = 1;
+
+        Assertions.assertThatThrownBy(() -> inputException.numUniqueLengthException(wrongUniqueLength1))
+                .isInstanceOf(IllegalArgumentException.class);
+        Assertions.assertThatThrownBy(() -> inputException.numUniqueLengthException(wrongUniqueLength2))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
 }

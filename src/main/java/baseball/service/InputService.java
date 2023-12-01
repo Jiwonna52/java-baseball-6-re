@@ -31,6 +31,6 @@ public class InputService {
     public void checkDuplicateNumber(List<Integer> userNum) throws IllegalArgumentException {
         Set<Integer> uniqueSet = new HashSet<>(userNum);
         int length = uniqueSet.size();
-        //inputException.numUniqueLengthException(length);
+        inputException.numUniqueLengthException(length);
     }
 }
