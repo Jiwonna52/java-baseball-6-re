@@ -1,9 +1,5 @@
 package baseball.view;
 
-import baseball.Model.Result;
-
-import java.util.List;
-
 public class OutputView {
 
     public void printWStartGame() {
