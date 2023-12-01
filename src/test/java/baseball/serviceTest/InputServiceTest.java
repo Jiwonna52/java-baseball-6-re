@@ -20,4 +20,14 @@ public class InputServiceTest {
         inputService.checkRangeService(rightUserNum);
         Assertions.assertThatThrownBy(() -> inputService.checkRangeService(wrongUserNum)).isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    @DisplayName("숫자 길이 테스트")
+    void checkLengthServiceTest() {
+        List<Integer> rightUserNum = new ArrayList<>(List.of(1, 2, 3));
+        List<Integer> wrongUserNum = new ArrayList<>(List.of(1, 1, 1, 1));
+
+        inputService.checkLengthService(rightUserNum);
+        Assertions.assertThatThrownBy(() -> inputService.checkLengthService(wrongUserNum)).isInstanceOf(IllegalArgumentException.class);
+    }
 }

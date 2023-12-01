@@ -26,9 +26,9 @@ public class InputExceptionTest {
         int wrongLength1 = 2;
         int wrongLength2 = 4;
 
-        Assertions.assertThatThrownBy(() -> inputException.numUniqueLengthException(wrongLength1))
+        Assertions.assertThatThrownBy(() -> inputException.numLengthException(wrongLength1))
                 .isInstanceOf(IllegalArgumentException.class);
-        Assertions.assertThatThrownBy(() -> inputException.numUniqueLengthException(wrongLength2))
+        Assertions.assertThatThrownBy(() -> inputException.numLengthException(wrongLength2))
                 .isInstanceOf(IllegalArgumentException.class);
     }
 

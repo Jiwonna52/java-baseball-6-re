@@ -5,7 +5,9 @@ import baseball.exceptionTest.InputException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class InputService {
     private BufferedReader br;
@@ -24,5 +26,11 @@ public class InputService {
     public void checkLengthService(List<Integer> userNum) throws IllegalArgumentException {
         int length = userNum.size();
         inputException.numLengthException(length);
+    }
+
+    public void checkDuplicateNumber(List<Integer> userNum) throws IllegalArgumentException {
+        Set<Integer> uniqueSet = new HashSet<>(userNum);
+        int length = uniqueSet.size();
+        //inputException.numUniqueLengthException(length);
     }
 }
