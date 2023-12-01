@@ -30,4 +30,20 @@ public class InputServiceTest {
         inputService.checkLengthService(rightUserNum);
         Assertions.assertThatThrownBy(() -> inputService.checkLengthService(wrongUserNum)).isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    @DisplayName("문자열 숫자 리스트 변환 테스트")
+    void makeNumServiceTest() {
+        String rightInput1 = "123";
+        List<Integer> rightNum = new ArrayList<>();
+        rightNum.add(1);
+        rightNum.add(2);
+        rightNum.add(3);
+
+        List<Integer> resultNum = inputService.makeNumService(rightInput1);
+
+        for (int i=0; i<rightNum.size(); i++) {
+            Assertions.assertThat(rightNum.get(i)).isEqualTo(resultNum.get(i));
+        }
+    }
 }
