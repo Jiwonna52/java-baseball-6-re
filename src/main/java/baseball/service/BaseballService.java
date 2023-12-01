@@ -17,6 +17,7 @@ public class BaseballService {
         return visitNumber;
     }
 
+
     public int countStrike(boolean[] visitNumber) {
         int count = 0;
         for (boolean visit : visitNumber) {
@@ -25,13 +26,6 @@ public class BaseballService {
             }
         }
         return count;
-    }
-
-    public boolean checkThreeStrike(int count) {
-        if (count == length) {
-            return true;
-        }
-        return false;
     }
 
     public int countBall(List<Integer> userNumber, List<Integer> computerNumber, boolean[] visitNumber) {
@@ -47,11 +41,6 @@ public class BaseballService {
         return uniqueUserNumber.size();
     }
 
-    public boolean checkNothing(int strikeCount, int ballCount) {
-        if (strikeCount == 0 && ballCount == 0) {
-            return true;
-        }
-        return false;
-    }
+
 
 }
