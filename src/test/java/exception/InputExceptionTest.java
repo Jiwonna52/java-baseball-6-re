@@ -15,7 +15,21 @@ public class InputExceptionTest {
         int wrongNum1 = 0;
         int wrongNum2 = 10;
 
-        Assertions.assertThatThrownBy(() -> inputException.numRangeException(wrongNum1)).isInstanceOf(IllegalArgumentException.class);
-        Assertions.assertThatThrownBy(() -> inputException.numRangeException(wrongNum2)).isInstanceOf(IllegalArgumentException.class);
+        Assertions.assertThatThrownBy(() -> inputException.numRangeException(wrongNum1))
+                .isInstanceOf(IllegalArgumentException.class);
+        Assertions.assertThatThrownBy(() -> inputException.numRangeException(wrongNum2))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    @DisplayName("숫자의 길이가 3이 아니면 예최 처리")
+    void numLengthExceptionTest() {
+        int wrongLength1 = 2;
+        int wrongLength2 = 4;
+
+        Assertions.assertThatThrownBy(() -> inputException.numLengthException(wrongLength1))
+                .isInstanceOf(IllegalArgumentException.class);
+        Assertions.assertThatThrownBy(() -> inputException.numLengthException(wrongLength2))
+                .isInstanceOf(IllegalArgumentException.class);
     }
 }
