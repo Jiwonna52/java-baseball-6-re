@@ -32,4 +32,17 @@ public class InputExceptionTest {
         Assertions.assertThatThrownBy(() -> inputException.numLengthException(wrongLength2))
                 .isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    @DisplayName("숫자가 아니면 예외")
+    void notNumExceptionTest() {
+        char notNum1 = 'a';
+        char notNum2 = '(';
+
+        Assertions.assertThatThrownBy(() -> inputException.notNumException(notNum1))
+                .isInstanceOf(IllegalArgumentException.class);
+        Assertions.assertThatThrownBy(() -> inputException.notNumException(notNum2))
+                .isInstanceOf(IllegalArgumentException.class);
+
+    }
 }

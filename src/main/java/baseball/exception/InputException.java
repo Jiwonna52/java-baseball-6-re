@@ -18,4 +18,10 @@ public class InputException {
         }
     }
 
+    public void notNumException(char num) {
+        if (!Character.isDigit(num)) {
+            throw new IllegalArgumentException();
+        }
+    }
+
 }
